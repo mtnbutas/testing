@@ -25,14 +25,14 @@ class Tweets(View):
 		data = json.loads(request.body)
 		pk = data.get('pk')
 		Tweet.objects.get(pk=pk).delete()
+		
 		response = json.dumps({'status': 'ok'})
 		return HttpResponse(response, content_type="application/json")
 
 	def post(self, request):
 		data = json.loads(request.body.decode('utf-8'))
-		if request.method == 'POST':
-			new_tweet = Tweet(content=data.get('content'))
-			new_tweet.save()
-			response = serializers.serialize("json", [new_tweet])
-       
+		new_tweet = Tweet(content=data.get('content'))
+		new_tweet.save()
+
+		response = serializers.serialize("json", [new_tweet])
 		return HttpResponse(response, content_type="application/json")

@@ -58,11 +58,14 @@ button {
     margin: 0;
     padding: 0; }
     .left .profilecard .header {
-      background-color: #14171A;
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100px; }
     .left .profilecard .userpic {
-      background-color: #0084B4;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 72px;
       height: 72px;
       border-radius: 50%;
@@ -115,7 +118,8 @@ button {
   .userfeed .new-tweet-field {
     background-color: #1DCAFF;
     padding: 10px 30px;
-    overflow: auto; }
+    overflow-y: auto;
+    overflow-x: hidden; }
     .userfeed .new-tweet-field textarea {
       font-family: "Helvetica Neue", sans-serif;
       font-size: 1em;
@@ -161,7 +165,9 @@ button {
       float: left;
       width: 45px; }
       .userfeed .tweet-wrapper .poster-pic-wrapper .poster-pic {
-        background-color: #657786;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 45px;
         height: 45px;
         border-radius: 50%; }
@@ -172,19 +178,23 @@ button {
       margin-left: 10px; }
       .userfeed .tweet-wrapper .post-info .poster-name {
         color: #14171A;
+        font-size: 1em;
         font-weight: bold;
         float: left;
-        margin: 0 2px; }
+        margin: 0 2px 0 0; }
       .userfeed .tweet-wrapper .post-info .poster-username, .userfeed .tweet-wrapper .post-info .time-posted {
         color: #657786;
         float: left;
         margin: 0 2px; }
       .userfeed .tweet-wrapper .post-info .post-content {
+        font-size: 0.95em;
         width: 100%;
         overflow: hidden;
         color: #14171A;
         overflow-wrap: break-word;
-        line-height: 1.5em; }
+        line-height: 1.5em;
+        white-space: pre-line;
+        word-wrap: break-word; }
     .userfeed .tweet-wrapper .post-settings {
       width: 100%;
       clear: right;
@@ -247,9 +257,12 @@ button {
 
 .right {
   background-color: #FFF;
-  width: 24%;
+  width: calc(24% - 40px);
   margin: 0 0 0 1%;
   float: right;
-  height: 300px; }
+  padding: 20px;
+  text-align: justify;
+  font-size: 1em;
+  font-weight: 600; }
 
 /*# sourceMappingURL=index.css.map */

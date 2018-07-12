@@ -84,17 +84,16 @@ button {
     padding: 0;
 
     .header {
-      background-color: $twitter-black;
+      background-size: cover;
+      background-repeat: no-repeat;
       width: 100%;
       height: 100px;
-      
-      .img {
-
-      }
     }
 
     .userpic {
-      background-color: $twitter-dark-blue;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       width: 72px;
       height: 72px;
       border-radius: 50%;
@@ -102,10 +101,6 @@ button {
       margin-left: 10px;
       margin-right: 10px;
       float: left;
-
-      .img {
-
-      }
     }
 
     .name-username-div {
@@ -177,7 +172,8 @@ button {
   .new-tweet-field {
     background-color: $twitter-light-blue;
     padding: 10px 30px;
-    overflow: auto; 
+    overflow-y: auto; 
+    overflow-x: hidden;
 
     textarea {
       font-family: $font-stack;
@@ -242,13 +238,12 @@ button {
       width: 45px;
 
       .poster-pic {
-        background-color: $twitter-gray;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        .img {
-
-        }
       }
     }
     
@@ -260,9 +255,10 @@ button {
 
       .poster-name {
         color: $twitter-black;
+        font-size: 1em;  
         font-weight: bold;
         float: left;
-        margin: 0 2px;
+        margin: 0 2px 0 0;
       }
 
       .poster-username, .time-posted {
@@ -272,11 +268,14 @@ button {
       } 
 
       .post-content {
+        font-size: 0.95em;
         width: 100%;
         overflow: hidden;
         color: $twitter-black;
         overflow-wrap: break-word;
         line-height: 1.5em;
+        white-space: pre-line; 
+        word-wrap: break-word;
       }
 
     }
@@ -386,8 +385,11 @@ button {
 
 .right {
   background-color: $white;
-  width: 24%;
+  width: calc(24% - 40px);
   margin: 0 0 0 1%;
   float: right;
-  height: 300px;
+  padding: 20px;
+  text-align: justify;
+  font-size: 1em;
+  font-weight: 600;
 }
